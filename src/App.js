@@ -15,9 +15,14 @@ class App extends React.Component {
   };
 
   decrement = () => {
-    this.setState({
-      amount: this.state.amount - 1
-    });
+    this.state.amount <= 0 ? alert("Invalid number") : this.setState({ amount: this.state.amount - 1 });
+    // this.setState({
+
+    //   amount: this.state.amount - 1
+    // });
+    // if (this.state.amount < 0) {
+    //   alert("angka tidak valid");
+    // }
   };
 
   kembaliNol = () => {
@@ -32,7 +37,8 @@ class App extends React.Component {
         <div id="judul">
           <h1>COUNTER MACHINE</h1>
         </div>
-        {this.state.amount < 0 ? "angka tidak valid" : this.state.amount}
+        {/* {this.state.amount < 0 ? alert("Angka tidak valid") : this.state.amount} */}
+        <div>{this.state.amount}</div>
         <div className="container">
           <div id="tambah" onClick={this.increment}>
             +
