@@ -15,14 +15,14 @@ class App extends React.Component {
   };
 
   decrement = () => {
-    this.state.amount <= 0 ? alert("Invalid number") : this.setState({ amount: this.state.amount - 1 });
-    // this.setState({
-
-    //   amount: this.state.amount - 1
-    // });
-    // if (this.state.amount < 0) {
-    //   alert("angka tidak valid");
-    // }
+    // this.state.amount <= 0 ? alert("Invalid number") : this.setState({ amount: this.state.amount - 1 });
+    if (this.state.amount <= 0) {
+      alert("Invalid number");
+    } else {
+      this.setState({
+        amount: this.state.amount - 1
+      });
+    }
   };
 
   kembaliNol = () => {
